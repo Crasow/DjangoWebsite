@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 import random
+from datetime import datetime
+
 
 
 class MainPageView(TemplateView):
@@ -13,11 +15,16 @@ class NewsPageView(TemplateView):
     def get_context_data(self, **kwargs):
         # get data from TemplateView
         context = super().get_context_data(**kwargs)
-        context["news_titles"] = []
+        
+        context["news_titles"] = "Loud news headline"
         context["news_preview"] = "Description that attract everyone"
-        for el in range(5):
-            rand_int = random.randint(1,20)
-            context["news_titles"].append(f"The best new title {rand_int}")
+        context["range"] = range(5)
+        context["datetime_obj"] = datetime.now()
+
+        # context["news_titles"] = []
+        # for el in range(5):
+        #     rand_int = random.randint(1,20)
+        #     context["news_titles"].append(f"The best new title {rand_int}")
         return context
 
 class CoursesPageView(TemplateView):
