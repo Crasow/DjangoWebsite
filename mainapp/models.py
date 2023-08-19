@@ -6,7 +6,7 @@ class News(models.Model):
     title = models.CharField("Title", max_length=256)
     preambule = models.CharField("Preambule", max_length=1024)
     body = models.TextField("Body", null=True, blank=True)
-    body_as_mardown = models.BooleanField("As markdown", default=False)
+    body_as_markdown = models.BooleanField("As markdown", default=False)
     created = models.DateTimeField("Created", auto_now_add=True, editable=False)
     updated = models.DateTimeField("Updated", auto_now=True, editable=False)
     deleted = models.BooleanField(default=False)
@@ -22,7 +22,7 @@ class News(models.Model):
 class Course(models.Model):
     name = models.CharField("Name", max_length=256)
     description = models.TextField("Description", blank=True, null=True)
-    description = models.TextField("As markdown", default=False)
+    description_as_markdown = models.BooleanField("As markdown", default=False)
     cost = models.DecimalField("Cost", max_digits=8, decimal_places=2, default=0)
     cover = models.CharField("Cover", max_length=25, default="no_image.svg")
     created = models.DateTimeField("Created", auto_now_add=True)

@@ -1,0 +1,106 @@
+[
+    {
+        "model": "mainapp.course",
+        "pk": 1,
+        "fields": {
+            "name": "Web Python",
+            "description": "The Web Python course will allow you to master the Python programming language and understand its fundamental aspects: modules, parsers, and regular expressions. The course is aimed at helping you learn how to create efficient programs to solve your tasks. It will teach you to develop your own web applications for working with databases and websites. You'll be able to use Python to learn Java, Ruby, PHP, C, C++, C#, or any other programming language.\r\nThe Web Python course covers the study of web frameworks like Django, Bootstrap, and Flask.\r\nIn the second semester, you will learn tools and methods such as:\r\n\r\n* PHP and MySql;\r\n* Working with DOC, EXCEL, PATH files;\r\n* Relational and object-oriented database model;\r\n* Package creation and management;\r\n* How to work with an FTP server;\r\n* Environment setup and website creation;\r\n* Web servers;\r\n* Configuration management in Unix and Windows;\r\n* Tools for website creation;\r\n* Integration of external applications;\r\n* Extensions;",
+            "description_as_markdown": true,
+            "cost": "10000.50",
+            "cover": "img/course001.jpg",
+            "created": "2021-07-11T08:24:53.084Z",
+            "updated": "2021-07-11T09:06:35.322Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 2,
+        "fields": {
+            "name": "Web Golang",
+            "description": "In the Web Golang course, you will learn the basics of Go, gain practical skills in implementing projects with Golang, and learn to work in distributed development environments. You will learn what Go is, how to compile Go code, and write tests. You will understand how web servers work. The course is led by Victor Ivanov, a Certified Google Developer Expert (Certified Technical Professional). He is the author of the book 'Web Development in Go.' In this course, you will learn the fundamentals of the Go programming language and gain practical experience in implementing projects with Go.",
+            "description_as_markdown": false,
+            "cost": "9009.99",
+            "cover": "img/course002.jpg",
+            "created": "2021-07-11T08:28:07.397Z",
+            "updated": "2021-07-11T09:06:40.127Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 3,
+        "fields": {
+            "name": "Web JavaScript",
+            "description": "The JavaScript course is taught by instructor Dmitry Koksharov. He teaches at various universities, including MIPT. Dmitry believes that the course is a knowledge foundation that will be useful in life.\r\nThe JavaScript course consists of modules, one of which is 'Fundamentals of Functional Programming.' This module is designed for those who are new to JavaScript or have just started learning the language. You will learn how functions are structured, the types of data, and how to use modifiers.\r\nIn the JavaScript program:\r\n\r\n* Basic design patterns\r\n* Pure JavaScript development\r\n* ReactJS and AngularJS\r\n* Object-Oriented Programming in JavaScript\r\n* Fundamentals of HTML5 and CSS3\r\n* JavaScript ES6 and ES7\r\n* Cross-browser basics\r\n\r\nImmerse yourself in the dynamic world of modern JS development. The JavaScript course is beneficial for both beginners and experienced developers who want to learn new technologies and gain new knowledge.",
+            "description_as_markdown": true,
+            "cost": "2500.15",
+            "cover": "img/course003.jpg",
+            "created": "2021-07-11T08:31:20.301Z",
+            "updated": "2021-07-11T09:06:46.902Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 4,
+        "fields": {
+            "name": "Web Java",
+            "description": "In the Java course, you will learn the language and framework from the basics to an advanced level.\r\nMost importantly, you will acquire theoretical and practical skills to create, debug, and test your programs. As a result, you will be able to complete projects of any complexity level using various development environments and tools, from Eclipse IDE to IntelliJ IDEA, not to mention modern cloud solutions from Google and GitHub.\r\nThe Java course is taught by a strong instructor, Dmitry. Dmitry is a living example of a professional, enthusiastic, and goal-oriented teacher. From the first lessons, even in the first class, you will realize that the instructor is interested in his students not just gaining theoretical knowledge but also acquiring practical skills.",
+            "description_as_markdown": false,
+            "cost": "10000.00",
+            "cover": "img/course004.jpg",
+            "created": "2021-07-11T08:34:10.771Z",
+            "updated": "2021-07-11T09:06:52.015Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 5,
+        "fields": {
+            "name": "Web PHP",
+            "description": "In the PHP course, you will learn the basics of PHP and acquire skills to work with it: working with databases, graphics, website creation, working in PHPEdit, exception handling, memory management, working with strings and files. The PHP course allows you to gain programming skills in this language. After completing the course, you will be able to create your own websites with a management system and apply your knowledge to create complete information systems.\r\nThe PHP course is taught by a developer from Sberbank who can turn complex things into simple ones. He will share how to create a website with just basic knowledge and will share important secrets.\r\n'I had enough time to start learning PHP from scratch and realize how cool it is. Once someone asked me why I don't write code myself and only consult others. I replied, 'Because I enjoy helping people.' But for that, you need to know everything.\r\nPHP is a complex thing.'",
+            "description_as_markdown": false,
+            "cost": "9500.78",
+            "cover": "img/course005.jpg",
+            "created": "2021-07-11T08:36:21.087Z",
+            "updated": "2021-07-11T09:06:57.580Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 6,
+        "fields": {
+            "name": "Python AI",
+            "description": "In the Python AI course, you will learn to create simple neural networks for computer vision tasks and progress to more complex networks.\r\nYou will be able to:\r\n\r\n* Learn about the world of machine learning, AI, and robotics.\r\n* For specialists in physics, mathematics, and Python programming.\r\n* Enhance Python skills and understand neural network algorithms for practical applications.\r\n\r\nThe Python AI course is taught by Denis Migachyov from the 'Fabrika Otkrytiy' school. He covers tools for creating AI and provides practical assignments such as developing your own Python game.",
+            "description_as_markdown": true,
+            "cost": "6660.66",
+            "cover": "img/course006.jpg",
+            "created": "2021-07-11T08:39:15.369Z",
+            "updated": "2021-07-11T09:07:04.253Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 7,
+        "fields": {
+            "name": "DevOps",
+            "description": "In the DevOps course, you will learn the basics of automation using Python, Git, Docker, and understand GitHub, Jenkins, and Kubernetes. You will understand how everything works and why it is necessary.\r\nThe course consists of 12 online seminars, each lasting 90 minutes. It is suitable for experienced programmers who want to improve their project management skills.\r\nIn the course, you will learn:\r\n\r\n* The key features and functions of Git\r\n* How to create, add, and delete branches, commits, and tags\r\n* How to name and use branches",
+            "description_as_markdown": true,
+            "cost": "7770.77",
+            "cover": "img/course007.jpg",
+            "created": "2021-07-11T08:40:33.347Z",
+            "updated": "2021-07-11T09:07:11.184Z"
+        }
+    },
+    {
+        "model": "mainapp.course",
+        "pk": 8,
+        "fields": {
+            "name": "3D Modeling",
+            "description": "The 3D Modeling course is taught by a practicing architect with advanced architectural education and over 7 years of teaching experience.\r\nIn the 3D Modeling course, you will learn programs such as:\r\n\r\n* 3D-Max\r\n* Blender\r\n* Rhino\r\n* Maya\r\n* AutoCAD (V-Ray)\r\n\r\nYou will learn to:\r\n\r\n1. Create models for application development.\r\n2. Design furniture.\r\n3. Create realistic textures and lighting.\r\n4. Produce animations.\r\n5. Configure workflows in various programs.\r\n6. Work with 3D Studio Max, Blender, Rhinoceros.\r\n7. Use tools in the AutoCAD program.\r\n8. Create your own projects or adapt 3D program models to your needs.",
+            "description_as_markdown": true,
+            "cost": "5900.00",
+            "cover": "img/no_image.svg",
+            "created": "2021-07-11T08:58:28.830Z",
+            "updated": "2021-07-11T09:07:16.651Z"
+        }
+    }
+]

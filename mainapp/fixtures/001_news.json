@@ -1,0 +1,74 @@
+[
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "Launch of a New Python Course",
+            "preambule": "We are pleased to announce the launch of a new Python course for beginners!",
+            "body": "Python is designed for development and exploration of new applications. We offer not only to learn a new programming language, but also to apply it in practice. This course is useful not only for those who want to learn programming, but also for those who lack time for practical assignments. It is also beneficial for those who cannot attend courses. The course consists of 7 sessions - one class per week lasting 3 hours. The sessions are held on Sundays at 2:00 PM.",
+            "body_as_markdown": false,
+            "created": "2021-07-07T18:32:47.331Z",
+            "updated": "2021-07-07T18:32:47.331Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 2,
+        "fields": {
+            "title": "No PHP Lesson on Wednesday",
+            "preambule": "For those who missed purchasing the course on Monday, we strongly recommend doing so using the link at the end of the publication.",
+            "body": "Today, there will be no open PHP lesson in Saratov that was scheduled to take place on Wednesday at the Faculty of Computer Science of SSU. The teacher assigned to the classroom said she fell ill and won't come. They rescheduled the next lesson, planned for February 28, except for the \"Web Programming\" course. This was announced in the faculty's group on the social network VKontakte. The \"Web Programmer\" course consists of two parts. The first part is a general course lasting for 72 hours.",
+            "body_as_markdown": false,
+            "created": "2021-07-06T18:32:47.331Z",
+            "updated": "2021-07-06T18:32:47.331Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 3,
+        "fields": {
+            "title": "All Department Managers to Connect to Zoom",
+            "preambule": "All employees are connected to Zoom, so we can see what they are doing and saying.",
+            "body": "Each of the 5 managers will be in one of their offices and use this application. We want them to be able to see everything happening on the site and view the reports provided. After employees connect to ZOOM, it's important for each secretary, manager, and others to connect to all 5 computers.",
+            "body_as_markdown": false,
+            "created": "2021-07-05T18:32:47.331Z",
+            "updated": "2021-07-05T18:32:47.331Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 4,
+        "fields": {
+            "title": "Today, Students Around the World Celebrate a Holiday",
+            "preambule": "Details inside...",
+            "body": "Today, students around the world are celebrating a holiday that is officially recognized as international, but is more common in countries like China or Japan. It's called the Student Pie Festival (Holly Fest) and is celebrated every year in early September. This holiday unites students worldwide. Students mark the beginning of the new academic year and exchange gifts with each other. In many Asian countries, this day also marks the beginning of the new year according to the Chinese calendar. Birthday - July 9, 23 years",
+            "body_as_markdown": false,
+            "created": "2021-07-04T18:32:47.331Z",
+            "updated": "2021-07-04T18:32:47.331Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 5,
+        "fields": {
+            "title": "Introducing the New DevOps Direction Instructor",
+            "preambule": "Dmitry Shishmaryov has been working in the IT business since 2001.",
+            "body": "Before joining the company \"1C-Bitrix\", he started his career as a system administrator. In 2009, he switched to the position of DevOps engineer, where he continues to work, developing in his field. Dmitry is a certified specialist of Bitrix company. He has more than 30 successfully implemented projects to his credit, including the development of a corporate project management system based on 1C-Bitrix.",
+            "body_as_markdown": false,
+            "created": "2021-07-03T18:32:47.331Z",
+            "updated": "2021-07-03T18:32:47.331Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 6,
+        "fields": {
+            "title": "JavaScript Tops the List of Most Disliked Languages Again",
+            "preambule": "Again and again.",
+            "body": "JavaScript tops the list of most disliked programming languages compiled by a British publication. Over 1000 software development specialists from various companies participated in the survey. The language's properties, such as learning complexity and simplicity, as well as performance, were considered when creating the list. The specialists rated the language on a 10-point scale, where one point meant \"awful\" and ten points meant \"disgusting.\"",
+            "body_as_markdown": false,
+            "created": "2021-07-02T18:32:47.331Z",
+            "updated": "2021-07-02T18:32:47.331Z"
+        }
+    }
+]
