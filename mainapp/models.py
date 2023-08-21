@@ -18,8 +18,12 @@ class News(models.Model):
         self.deleted = True
         self.save()
 
+class CoursesManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
 
 class Course(models.Model):
+    objects = CoursesManager()
     name = models.CharField("Name", max_length=256)
     description = models.TextField("Description", blank=True, null=True)
     description_as_markdown = models.BooleanField("As markdown", default=False)
@@ -67,3 +71,7 @@ class CourseTeacher(models.Model):
 
     def __str__(self) -> str:
         return "{0:0>3} {1} {2}".format(self.pk, self.name_second, self.name_first)
+    
+    def delete(self, *args):
+        self.deleted = True
+        self.save()
