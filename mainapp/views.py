@@ -30,7 +30,7 @@ class CoursesListView(TemplateView):
     
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super(CoursesListView, self).get_context_data(**kwargs)
-        context["objects"] = models.Courses.objects.all()[:7]
+        context["objects"] = models.Course.objects.all()[:7]
         return context
     
 class CoursesDetailView(TemplateView):
@@ -40,7 +40,7 @@ class CoursesDetailView(TemplateView):
         context = super(CoursesDetailView, self).get_context_data(**kwargs)
         context["course_object"] = get_object_or_404(models.Courses, pk=pk)
         context["lessons"] = models.Lesson.objects.filter(course=context["course_object"])
-        context["teachers"] = models.CourseTeachers.objects.filter(course=context["course_object"])
+        context["teachers"] = models.CourseTeacher.objects.filter(course=context["course_object"])
         return context
 
 class CoursesPageView(TemplateView):

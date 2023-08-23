@@ -2,7 +2,13 @@ from typing import Any, Dict, Tuple
 from django.db import models
 
 
+class NewsManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted=False)
+
 class News(models.Model):
+    objects = NewsManager()
+    
     title = models.CharField("Title", max_length=256)
     preambule = models.CharField("Preambule", max_length=1024)
     body = models.TextField("Body", null=True, blank=True)
@@ -24,6 +30,7 @@ class CoursesManager(models.Manager):
 
 class Course(models.Model):
     objects = CoursesManager()
+    
     name = models.CharField("Name", max_length=256)
     description = models.TextField("Description", blank=True, null=True)
     description_as_markdown = models.BooleanField("As markdown", default=False)
