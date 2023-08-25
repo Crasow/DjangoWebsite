@@ -1,74 +1,74 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block title %}
-News
+  News
 {% endblock title %}
 
-{% block content %} 
+{% block content %}
 
-{% if page_num %}
-<div class="card my-2">
-  <div class="card-body">
-    <p class="card-text">Current page: {{ page_num }}</p>
-  </div>
-</div>
-{% endif %}
-
-
-<div class="row">
-  <div class="col-lg-8">
-    {% for item in news_qs %}
+  {% if page_num %}
     <div class="card my-2">
       <div class="card-body">
-        <h5 class="card-title">{{ item.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">
-          {{ item.created|date:"Y-m-d h-i-s" }}
-        </h6>
-        <p class="card-text">{{ item.preambule }}</p>
-        <a href="{% url 'mainapp:news_detail' pk=item.pk %}" class="card-link"
-          >More</a
-        >
+        <p class="card-text">Current page: {{ page_num }}</p>
       </div>
     </div>
-    {% endfor %}
-  </div>
-  <div class="col-lg-4">
-    <div class="card my-2 sticky-top">
-      <div class="card-header">Filters</div>
-      <div class="card-body">
-        <form action="">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"
-                >Date from...</span
+  {% endif %}
+
+
+  <div class="row">
+    <div class="col-lg-8">
+      {% for item in news_qs %}
+        <div class="card my-2">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{ item.created|date:"Y-m-d h-i-s" }}
+            </h6>
+            <p class="card-text">{{ item.preambule }}</p>
+            <a href="{% url 'mainapp:news_detail' pk=item.pk %}" class="card-link"
+            >More</a
               >
             </div>
-            <input type="date" class="form-control" name="dateFrom" />
           </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Date to...</span>
-            </div>
-            <input type="date" class="form-control" name="dateTo" />
+      {% endfor %}
+    </div>
+    <div class="col-lg-4">
+      <div class="card my-2 sticky-top">
+        <div class="card-header">Filters</div>
+        <div class="card-body">
+          <form action="">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"
+                >Date from...</span
+                  >
+                </div>
+                <input type="date" class="form-control" name="dateFrom" />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Date to...</span>
+                </div>
+                <input type="date" class="form-control" name="dateTo" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Filter
+              </button>
+            </form>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Filter
-          </button>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="row justify-content-center align-items-center mt-3 mb-n3">
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <div class="row justify-content-center align-items-center mt-3 mb-n3">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
       {# <li class="page-item"><a class="page-link" href="#">3</a></li> #}
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-  </nav>
-</div>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
 
 {% endblock content %}
