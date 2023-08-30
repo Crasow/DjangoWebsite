@@ -20,8 +20,11 @@
   </head>
 
   <body>
-    {% include 'includes/main_menu.html' %} {% block messages %} {% include
-    'includes/messages.html' %} {% endblock messages %}
+    {% include 'includes/main_menu.html' %}
+    {% block messages %} 
+    {% include 'includes/messages.html' %} 
+    {% endblock messages %}
+    
     <div class="container-md">
       {% block content %} Lorem ipsum dolor sit amet, consectetur adipisicing
       elit. Aspernatur optio est esse? Veritatis laborum expedita quibusdam

@@ -151,3 +151,8 @@ LOGIN_REDIRECT_URL = "mainapp:main_page"
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+SOCIAL_AUTH_GITHUB_KEY = "c28e8ce5b0c213fbb9a6"
+
+SOCIAL_AUTH_GITHUB_SECRET = "493d27d1f86a62908e93e1bb86e0c4e334e7549d"
+
