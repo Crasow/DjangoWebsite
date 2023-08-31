@@ -1,5 +1,6 @@
 from typing import Any, Dict, Tuple
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class NewsManager(models.Manager):
@@ -23,6 +24,11 @@ class News(models.Model):
     def delete(self, **args):
         self.deleted = True
         self.save()
+    
+    class Meta:
+        verbose_name = _("News")
+        verbose_name_plural = _("News")
+        ordering = ("-created",)
 
 class CoursesManager(models.Manager):
     def get_queryset(self):
@@ -41,7 +47,7 @@ class Course(models.Model):
     deleted = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return f"{self.pk} {self.title}"
+        return f"{self.pk} {self.name}"
 
     def delete(self, **args):
         self.deleted = True
