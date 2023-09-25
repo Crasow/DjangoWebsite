@@ -43,17 +43,9 @@ class CoursesDetailView(TemplateView):
         context["teachers"] = models.CourseTeacher.objects.filter(course=context["course_object"])
         return context
 
-class CoursesPageView(TemplateView):
-    template_name = "mainapp/courses_list.html"
-
-
 class ContactsPageView(TemplateView):
     template_name = "mainapp/contacts.html"
 
 
 class DocSitePageView(TemplateView):
     template_name = "mainapp/doc_site.html"
-
-
-class LoginPageView(TemplateView):
-    template_name = "authapp/login.html"
