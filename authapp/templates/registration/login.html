@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/Chart.min.css' %}">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
-    <title>Welcome to Braniac!</title>
+    <title>Welcome to Crasow!</title>
   </head>
   
   <body>
@@ -26,7 +26,7 @@
             <img src="{% static 'img/logo.png' %}" alt="">
           </a>
         </p>
-        <h2>Вход пользователя</h2>
+        <h2>User login</h2>
         <form method="POST">
           {% csrf_token %}
           <p>
@@ -51,20 +51,20 @@
                    placeholder="Password">
           </p>
           <p>
-            <button type="submit" class="btn btn-primary btn-block">Войти</button>
+            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
           </p>
         </form>
         <p>
           <div class="row justify-content-between">
             <div class="col">
-              <a href="{% url 'authapp:register' %}"><small>Регистрация</small></a>
+              <a href="{% url 'authapp:register' %}"><small>Sign up</small></a>
             </div>
             <div class="col">
-              <a href="#"><small>Забыли пароль?</small></a>
+              <a href="#"><small>Forgot your password?</small></a>
             </div>
           </div>
         </p>
-        <h4>Вход через социальные сети</h4>
+        <h4>Sign in via social networks</h4>
         <p>
           <div class="btn-group btn-block" role="group">
             <a class="btn btn-primary" href="#" role="button"><i class="fab fa-vk"></i></a>

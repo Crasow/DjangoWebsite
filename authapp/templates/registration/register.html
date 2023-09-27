@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <div class="row justify-content-center my-2">
   <div class="col-lg-6">
-    <h3>Регистрация нового пользователя</h3>
+    <h3>New user registration</h3>
     <form method="post" class="mt-2" enctype="multipart/form-data">
       {% csrf_token %}
       <div id="div_id_username" class="form-group">
@@ -131,7 +131,7 @@
         </div>
       </div>
       <button type="submit" class="btn btn-primary btn-block">
-        Зарегистрироваться
+        Sign up
       </button>
     </form>
   </div>
