@@ -109,10 +109,11 @@ class RegisterView(CreateView):
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
     model = get_user_model()
-    from_class = forms.CustomUserChangeForm
+    form_class = forms.CustomUserChangeForm
     
     def test_func(self) -> bool | None:
         return True if self.request.user.pk == self.kwargs.get("pk") else False
     
     def get_success_url(self) -> str:
+        print(self.request.user.pk)
         return reverse_lazy("authapp:profile_edit", args = [self.request.user.pk])
