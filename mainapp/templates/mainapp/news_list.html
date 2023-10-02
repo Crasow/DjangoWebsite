@@ -10,7 +10,7 @@ News
 {% if page_num %}
 <div class="card my-2">
   <div class="card-body">
-    <p class="card-text">Текущая страница: {{ page_num }}</p>
+    <p class="card-text">Current page: {{ page_num }}</p>
   </div>
 </div>
 {% endif %}
@@ -29,7 +29,7 @@ News
             <a
               href="{% url 'mainapp:news_detail' pk=item.pk %}"
               class="card-link"
-              >Подробнее</a
+              >More</a
             >
           </div>
           {% if perms.mainapp.change_news %}
@@ -38,7 +38,8 @@ News
               <i class="far fa-edit"></i>
             </a>
           </div>
-          {% endif %} {% if perms.mainapp.delete_news %}
+          {% endif %} 
+          {% if perms.mainapp.delete_news %}
           <div class="col-1 text-center">
             <a href="{% url 'mainapp:news_delete' pk=item.pk %}">
               <i class="far fa-trash-alt"></i>
@@ -52,23 +53,23 @@ News
   </div>
   <div class="col-lg-4">
     <div class="card my-2 sticky-top">
-      <div class="card-header">Фильтры</div>
+      <div class="card-header">Filters</div>
       <div class="card-body">
         <form action="">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Дата от...</span>
+              <span class="input-group-text" id="basic-addon1">Date from...</span>
             </div>
             <input type="date" class="form-control" name="dateFrom" />
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Дата до...</span>
+              <span class="input-group-text" id="basic-addon1">Date to...</span>
             </div>
             <input type="date" class="form-control" name="dateTo" />
           </div>
           <button type="submit" class="btn btn-primary btn-block">
-            Фильтровать
+            Filter
           </button>
         </form>
       </div>
@@ -78,7 +79,7 @@ News
       class="btn btn-primary btn-block"
       role="button"
       href="{% url 'mainapp:news_create' %}"
-      >Добавить новость</a
+      >Add news</a
     >
     {% endif %}
   </div>
