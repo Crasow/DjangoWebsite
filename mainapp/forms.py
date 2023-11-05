@@ -13,11 +13,11 @@ class CourseFeedbackForm(forms.ModelForm):
         return ret
 
 
-class Meta:
-    model = mainapp_models.CourseFeedback
-    fields = ("course", "user", "feedback", "rating")
-    widgets = {
-        "course": forms.HiddenInput(),
-        "user": forms.HiddenInput(),
-        "rating": forms.RadioSelect(),
-    }
+    class Meta:
+        model = mainapp_models.CourseFeedback
+        fields = ("course", "user", "feedback", "rating")
+        widgets = {
+            "course": forms.HiddenInput(),
+            "user": forms.HiddenInput(),
+            "rating": forms.RadioSelect(),
+        }
