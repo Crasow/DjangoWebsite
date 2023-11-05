@@ -51,11 +51,11 @@ class NewsDeleteView(PermissionRequiredMixin, DeleteView):
 
 
 class NewsPageView(TemplateView):
-    template_name = "mainapp/news.html"
+    template_name = "mainapp/news_list.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["news_qs"] = mainapp_models.News.objects.all()[:5]
+        context["object_list"] = mainapp_models.News.objects.all()[:5]
         return context
 
 
@@ -64,7 +64,7 @@ class NewsPageDetailView(TemplateView):
 
     def get_context_data(self, pk=None, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(pk=pk, **kwargs)
-        context["news_objects"] = get_object_or_404(mainapp_models.News, pk=pk)
+        context["news_object"] = get_object_or_404(mainapp_models.News, pk=pk)
         return context
 
 
