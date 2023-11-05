@@ -1,5 +1,6 @@
 from typing import Any, Dict, Tuple
 from django.db import models
+from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 
 
@@ -7,9 +8,10 @@ class NewsManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
 
+
 class News(models.Model):
     objects = NewsManager()
-    
+
     title = models.CharField("Title", max_length=256)
     preambule = models.CharField("Preambule", max_length=1024)
     body = models.TextField("Body", null=True, blank=True)
@@ -24,19 +26,21 @@ class News(models.Model):
     def delete(self, **args):
         self.deleted = True
         self.save()
-    
+
     class Meta:
         verbose_name = _("News")
         verbose_name_plural = _("News")
         ordering = ("-created",)
 
+
 class CoursesManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
 
+
 class Course(models.Model):
     objects = CoursesManager()
-    
+
     name = models.CharField("Name", max_length=256)
     description = models.TextField("Description", blank=True, null=True)
     description_as_markdown = models.BooleanField("As markdown", default=False)
@@ -84,7 +88,27 @@ class CourseTeacher(models.Model):
 
     def __str__(self) -> str:
         return "{0:0>3} {1} {2}".format(self.pk, self.name_second, self.name_first)
-    
+
     def delete(self, *args):
         self.deleted = True
         self.save()
+
+
+class CourseFeedback(models.Model):
+    RATING = ((5, "⭐⭐⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (3, "⭐⭐⭐"), (2, "⭐⭐"), (1, "⭐"))
+    course = models.ForeignKey(
+        Course, on_delete=models.CASCADE, verbose_name=_("Course")
+    )
+    user = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE, verbose_name=_("User")
+    )
+    feedback = models.TextField(default=_("No feedback"), verbose_name=_("Feedback"))
+    rating = models.SmallIntegerField(
+        choices=RATING, default=5, verbose_name=_("Rating")
+    )
+    created = models.DateTimeField(auto_now_add=True, verbose_name="Created")
+    deleted = models.BooleanField(default=False)
+
+
+def __str__(self):
+    return f"{self.course} ({self.user})"
