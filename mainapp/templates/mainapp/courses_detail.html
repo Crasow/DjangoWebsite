@@ -21,10 +21,11 @@
       </div>
       <div class="col-12 align-self-end">
         <p>
-          <small>Преподаватели</small><br>
+          <small>Teachers</small><br>
           {% for item in teachers %}
-          {{ item.name_second }} {{ item.name_first }}{% if forloop.last %}{%
-          else %},{% endif %}
+            {{ item.name_second }} {{ item.name_first }}
+            {% if forloop.last %}{%else %},
+            {% endif %}
           {% endfor %}
         </p>
       </div>
