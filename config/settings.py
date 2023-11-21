@@ -19,8 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Secret keys
 SECRET_KEY = "django-insecure-7zl!g4%+ii*mtgr*1s&zf3ru&1mfv^4u94skiu0pd^-yi41(+w"
+
+SOCIAL_AUTH_GITHUB_KEY = "c28e8ce5b0c213fbb9a6"
+
+SOCIAL_AUTH_GITHUB_SECRET = "493d27d1f86a62908e93e1bb86e0c4e334e7549d"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -99,6 +103,8 @@ DATABASES = {
 
 AUTH_USER_MODEL = "authapp.CustomUser"
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -135,28 +141,55 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Custom logging settings
+
+LOG_FILE = BASE_DIR / "log" / "main_log.log"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "console": {
+            "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
+        },
+    },
+    "handlers": {
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": LOG_FILE,
+            "formatter": "console",
+        },
+        "console": {"class": "logging.StreamHandler", "formatter": "console"},
+    },
+    "loggers": {
+        "django": {"level": "INFO", "handlers": ["file", "console"]},
+        "mainapp": {
+            "level": "DEBUG",
+            "handlers": ["file"],
+        },
+    },
+}
+
+# Redirect
+
 LOGIN_REDIRECT_URL = "mainapp:main_page"
 
 LOGOUT_REDIRECT_URL = "mainapp:main_page"
-
-MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
-
-SOCIAL_AUTH_GITHUB_KEY = "c28e8ce5b0c213fbb9a6"
-
-SOCIAL_AUTH_GITHUB_SECRET = "493d27d1f86a62908e93e1bb86e0c4e334e7549d"
-
-CRISPY_TEMPLATE_PACK = "bootstrap4"
-CRISPY_ALLOWED_TEMPLATE_PACKS  = "bootstrap4"
