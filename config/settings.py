@@ -29,7 +29,12 @@ SOCIAL_AUTH_GITHUB_SECRET = "493d27d1f86a62908e93e1bb86e0c4e334e7549d"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+if DEBUG:
+    INTERNAL_IPS = [
+    "127.0.0.1",
+    ]
 
 
 # Application definition
@@ -47,6 +52,7 @@ INSTALLED_APPS = [
     "authapp",
     "crispy_forms",
     "crispy_bootstrap4",
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
@@ -57,6 +63,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
