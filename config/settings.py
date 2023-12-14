@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["*"]
 
 if DEBUG:
     INTERNAL_IPS = [
-    "127.0.0.1",
+        "127.0.0.1",
     ]
 
 
@@ -94,6 +94,16 @@ AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
     "django.contrib.auth.backends.ModelBackend",
 )
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
 
 WSGI_APPLICATION = "config.wsgi.application"
 
